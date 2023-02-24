@@ -7,7 +7,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-
 public class DisplayContentSoftAssertionPage {
     @BeforeAll
     static void beforeAll() {
@@ -22,11 +21,6 @@ public class DisplayContentSoftAssertionPage {
         $("#wiki-pages-filter").setValue("SoftAssertions");
         $(byText("SoftAssertions")).shouldBe(Condition.visible).click();
         $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
-
-
-
         sleep(2000);
-
     }
-
 }
